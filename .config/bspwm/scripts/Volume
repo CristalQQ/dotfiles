@@ -13,7 +13,6 @@
 #
 
 # Icons
-vol_dir="$HOME/.config/bspwm/assets"
 notify_cmd='dunstify -u low -h string:x-dunst-stack-tag:cvolum'
 
 # Get Volume
@@ -23,12 +22,19 @@ get_volume() {
 
 # Get icons
 get_icon() {
-    current="$(get_volume)"
-    if [[ "$current" -eq "0" || "$current" == "muted" ]]; then
-        icon="$vol_dir/mute.png"
-    else
-        icon="$vol_dir/vol.png"
-    fi
+	vol="$(get_volume)"
+	current="${vol%%%}"
+	if [[ "$current" -eq "0" ]]; then
+		icon='/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-muted-symbolic.svg'
+	elif [[ ("$current" -ge "0") && ("$current" -le "30") ]]; then
+		icon='/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-low-symbolic.svg'
+	elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
+		icon='/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-medium-symbolic.svg'
+	elif [[ ("$current" -ge "60") && ("$current" -le "90") ]]; then
+		icon='/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-high-symbolic.svg'
+	elif [[ ("$current" -ge "90") && ("$current" -le "100") ]]; then
+		icon='/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-overamplified-symbolic.svg'
+	fi
 }
 
 # Notify
