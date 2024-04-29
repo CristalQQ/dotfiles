@@ -27,13 +27,6 @@ super + @space
 
 #####
 
-# Change language
-Alt_L + shift
-	sh $HOME/.config/bspwm/change_language.sh
-
-Shift_L + alt
-	sh $HOME/.config/bspwm/change_language.sh
-
 # Apps (browser, editor, filemanager)
 shift + alt + {b,g,n}
 	OpenApps {--browser,--editor,--filemanager}
