@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Установка пакетов
-sudo pacman -S alacritty base-devel brightnessctl bspwm dunst feh geany git kitty imagemagick jq \
+sudo pacman -S alacritty discord qbittorrent obsidian starship base-devel brightnessctl bspwm dunst feh geany git kitty imagemagick jq \
                jgmenu libwebp lsd maim mpc mpd neovim ncmpcpp npm pamixer pacman-contrib \
                papirus-icon-theme physlock picom playerctl polybar polkit-gnome python-gobject ranger \
                redshift rofi rustup sxhkd ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
