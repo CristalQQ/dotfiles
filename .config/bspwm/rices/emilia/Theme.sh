@@ -221,10 +221,10 @@ set_launcher_config() {
 
 	# WallSelect menu colors
 	sed -i "$HOME/.config/bspwm/scripts/WallSelect.rasi" \
-		-e 's/\(main-bg: \).*/\1#1A1B26E6;/' \
-		-e 's/\(main-fg: \).*/\1#C0CAF5;/' \
-		-e 's/\(select-bg: \).*/\1#7daea3;/' \
-		-e 's/\(select-fg: \).*/\1#1A1B26;/'
+		-e 's/\(main-bg: \).*/\1#32302f;/' \
+		-e 's/\(main-fg: \).*/\1#d4be98;/' \
+		-e 's/\(select-bg: \).*/\1#ea6962;/' \
+		-e 's/\(select-fg: \).*/\1#d4be98;/'
 }
 
 # Launch the bar
