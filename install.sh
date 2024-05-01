@@ -7,7 +7,7 @@ sudo pacman -S alacritty discord qbittorrent obsidian starship base-devel bright
                redshift rofi rustup sxhkd ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
                ttf-joypixels ttf-terminus-nerd ueberzug webp-pixbuf-loader xclip xdg-user-dirs \
                xdo xdotool xorg-xdpyinfo xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot \
-               xorg-xwininfo fish lightdm
+               xorg-xwininfo fish lightdm pipewire pipewire-pulse wireplumber pavucontrol
 
 # Проверка успешности установки
 if [ $? -eq 0 ]; then
